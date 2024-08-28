@@ -62,6 +62,29 @@
     "advertisements": {
       "via": "users_permissions_user",
       "collection": "advertisement"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "chat_p1": {
+      "via": "chat_sender_p1",
+      "collection": "chat-communications"
+    },
+    "chat_p2": {
+      "via": "chat_receiver_p2",
+      "collection": "chat-communications"
+    },
+    "services": {
+      "type": "richtext"
+    },
+    "public": {
+      "type": "boolean"
+    },
+    "profile_img": {
+      "type": "string"
+    },
+    "profile_img_id": {
+      "type": "string"
     }
   }
 }

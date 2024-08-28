@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/districts": {
+    "/placement-bonuses": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,9 +10,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/District"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "District"
+          "Placement-bonus"
         ],
         "parameters": [
           {
@@ -201,72 +202,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/District"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "District"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewDistrict"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/districts/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,12 +244,22 @@
         },
         "summary": "",
         "tags": [
-          "District"
+          "Placement-bonus"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewPlacement-bonus"
+              }
+            }
+          }
+        }
       }
     },
-    "/districts/{id}": {
+    "/placement-bonuses/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +269,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/District"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "District"
+          "Placement-bonus"
+        ],
+        "parameters": []
+      }
+    },
+    "/placement-bonuses/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Placement-bonus"
         ],
         "parameters": [
           {
@@ -383,7 +392,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/District"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "District"
+          "Placement-bonus"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDistrict"
+                "$ref": "#/components/schemas/NewPlacement-bonus"
               }
             }
           }
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "District"
+          "Placement-bonus"
         ],
         "parameters": [
           {
@@ -514,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "District": {
+      "Placement-bonus": {
         "required": [
           "id"
         ],
@@ -522,70 +535,67 @@
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string"
+          "bonus": {
+            "type": "number"
           },
-          "advertisements": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "jobTitle": {
-                  "type": "string"
-                },
-                "workingTime": {
-                  "type": "string"
-                },
-                "location": {
-                  "type": "string"
-                },
-                "salary": {
-                  "type": "string"
-                },
-                "assignment": {
-                  "type": "string"
-                },
-                "district": {
-                  "type": "string"
-                },
-                "users_permissions_user": {
-                  "type": "string"
-                },
-                "placement_bonuses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "requirements": {
-                  "type": "string"
-                },
-                "benefits": {
-                  "type": "string"
-                },
-                "non_ad": {
-                  "type": "boolean"
-                },
-                "chat_communications": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
+          "advertisement": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "jobTitle": {
+                "type": "string"
+              },
+              "workingTime": {
+                "type": "string"
+              },
+              "location": {
+                "type": "string"
+              },
+              "salary": {
+                "type": "string"
+              },
+              "assignment": {
+                "type": "string"
+              },
+              "district": {
+                "type": "string"
+              },
+              "users_permissions_user": {
+                "type": "string"
+              },
+              "placement_bonuses": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
+              },
+              "requirements": {
+                "type": "string"
+              },
+              "benefits": {
+                "type": "string"
+              },
+              "non_ad": {
+                "type": "boolean"
+              },
+              "chat_communications": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -595,16 +605,13 @@
           }
         }
       },
-      "NewDistrict": {
+      "NewPlacement-bonus": {
         "properties": {
-          "name": {
-            "type": "string"
+          "bonus": {
+            "type": "number"
           },
-          "advertisements": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "advertisement": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -620,9 +627,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "District"
-    }
-  ]
+  "tags": []
 }

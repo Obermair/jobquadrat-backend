@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "advertisements",
   "info": {
-    "name": "Advertisement",
+    "name": "Advertisements",
     "description": ""
   },
   "options": {
@@ -27,23 +27,32 @@
     "assignment": {
       "type": "richtext"
     },
+    "district": {
+      "model": "district",
+      "via": "advertisements"
+    },
+    "users_permissions_user": {
+      "via": "advertisements",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "placement_bonuses": {
+      "collection": "placement-bonus",
+      "via": "advertisement"
+    },
     "requirements": {
       "type": "richtext"
     },
     "benefits": {
       "type": "richtext"
     },
-    "placementBonus": {
-      "type": "decimal"
+    "non_ad": {
+      "type": "boolean",
+      "default": true
     },
-    "district": {
-      "model": "district",
-      "via": "advertisements"
-    },
-    "users_permissions_user": {
-      "plugin": "users-permissions",
-      "model": "user",
-      "via": "advertisements"
+    "chat_communications": {
+      "via": "advertisement",
+      "collection": "chat-communications"
     }
   }
 }

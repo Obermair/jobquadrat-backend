@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chat_communications",
+  "info": {
+    "name": "ChatCommunications",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "advertisement": {
+      "model": "advertisement",
+      "via": "chat_communications"
+    },
+    "chat_sender_p1": {
+      "via": "chat_p1",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "chat_receiver_p2": {
+      "via": "chat_p2",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "last_message_timestamp": {
+      "type": "datetime"
+    },
+    "unread_message_p1": {
+      "type": "boolean"
+    },
+    "unread_message_p2": {
+      "type": "boolean"
+    }
+  }
+}

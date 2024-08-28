@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "placement_bonuses",
+  "info": {
+    "name": "PlacementBonus"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bonus": {
+      "type": "decimal"
+    },
+    "advertisement": {
+      "via": "placement_bonuses",
+      "model": "advertisement"
+    }
+  }
+}

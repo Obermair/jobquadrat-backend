@@ -567,6 +567,33 @@
                     "type": "string"
                   }
                 },
+                "description": {
+                  "type": "string"
+                },
+                "chat_p1": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "chat_p2": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "services": {
+                  "type": "string"
+                },
+                "public": {
+                  "type": "boolean"
+                },
+                "profile_img": {
+                  "type": "string"
+                },
+                "profile_img_id": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },

@@ -1,18 +1,19 @@
 {
   "paths": {
-    "/districts": {
+    "/chat-communications": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the chat-communications's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve chat-communications document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/District"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "District"
+          "Chat-communications"
         ],
         "parameters": [
           {
@@ -194,79 +195,16 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new chat-communications record",
         "responses": {
           "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/District"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "District"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewDistrict"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/districts/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
+            "description": "Retrieve chat-communications document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,22 +244,36 @@
         },
         "summary": "",
         "tags": [
-          "District"
+          "Chat-communications"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewChat-communications"
+              }
+            }
+          }
+        }
       }
     },
-    "/districts/{id}": {
+    "/chat-communications/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the number of chat-communications documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve chat-communications document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/District"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "District"
+          "Chat-communications"
+        ],
+        "parameters": []
+      }
+    },
+    "/chat-communications/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one chat-communications record",
+        "responses": {
+          "200": {
+            "description": "Retrieve chat-communications document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Chat-communications"
         ],
         "parameters": [
           {
@@ -376,14 +385,18 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single chat-communications record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve chat-communications document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/District"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "District"
+          "Chat-communications"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDistrict"
+                "$ref": "#/components/schemas/NewChat-communications"
               }
             }
           }
@@ -449,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single chat-communications record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single chat-communications based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "District"
+          "Chat-communications"
         ],
         "parameters": [
           {
@@ -514,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "District": {
+      "Chat-communications": {
         "required": [
           "id"
         ],
@@ -522,72 +535,232 @@
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string"
-          },
-          "advertisements": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "jobTitle": {
-                  "type": "string"
-                },
-                "workingTime": {
-                  "type": "string"
-                },
-                "location": {
-                  "type": "string"
-                },
-                "salary": {
-                  "type": "string"
-                },
-                "assignment": {
-                  "type": "string"
-                },
-                "district": {
-                  "type": "string"
-                },
-                "users_permissions_user": {
-                  "type": "string"
-                },
-                "placement_bonuses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "requirements": {
-                  "type": "string"
-                },
-                "benefits": {
-                  "type": "string"
-                },
-                "non_ad": {
-                  "type": "boolean"
-                },
-                "chat_communications": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
+          "advertisement": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "jobTitle": {
+                "type": "string"
+              },
+              "workingTime": {
+                "type": "string"
+              },
+              "location": {
+                "type": "string"
+              },
+              "salary": {
+                "type": "string"
+              },
+              "assignment": {
+                "type": "string"
+              },
+              "district": {
+                "type": "string"
+              },
+              "users_permissions_user": {
+                "type": "string"
+              },
+              "placement_bonuses": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
+              },
+              "requirements": {
+                "type": "string"
+              },
+              "benefits": {
+                "type": "string"
+              },
+              "non_ad": {
+                "type": "boolean"
+              },
+              "chat_communications": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
+          },
+          "chat_sender_p1": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "advertisements": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "description": {
+                "type": "string"
+              },
+              "chat_p1": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "chat_p2": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "services": {
+                "type": "string"
+              },
+              "public": {
+                "type": "boolean"
+              },
+              "profile_img": {
+                "type": "string"
+              },
+              "profile_img_id": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "chat_receiver_p2": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "advertisements": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "description": {
+                "type": "string"
+              },
+              "chat_p1": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "chat_p2": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "services": {
+                "type": "string"
+              },
+              "public": {
+                "type": "boolean"
+              },
+              "profile_img": {
+                "type": "string"
+              },
+              "profile_img_id": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "last_message_timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "unread_message_p1": {
+            "type": "boolean"
+          },
+          "unread_message_p2": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",
@@ -595,16 +768,26 @@
           }
         }
       },
-      "NewDistrict": {
+      "NewChat-communications": {
         "properties": {
-          "name": {
+          "advertisement": {
             "type": "string"
           },
-          "advertisements": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "chat_sender_p1": {
+            "type": "string"
+          },
+          "chat_receiver_p2": {
+            "type": "string"
+          },
+          "last_message_timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "unread_message_p1": {
+            "type": "boolean"
+          },
+          "unread_message_p2": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",
@@ -620,9 +803,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "District"
-    }
-  ]
+  "tags": []
 }

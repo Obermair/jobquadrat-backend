@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/jobs",
-      "handler": "advertisement.find",
+      "path": "/chat-communications",
+      "handler": "chat-communications.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/jobs/count",
-      "handler": "advertisement.count",
+      "path": "/chat-communications/count",
+      "handler": "chat-communications.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/jobs/:id",
-      "handler": "advertisement.findOne",
+      "path": "/chat-communications/:id",
+      "handler": "chat-communications.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/jobs",
-      "handler": "advertisement.create",
+      "path": "/chat-communications",
+      "handler": "chat-communications.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/jobs/:id",
-      "handler": "advertisement.update",
+      "path": "/chat-communications/:id",
+      "handler": "chat-communications.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/jobs/:id",
-      "handler": "advertisement.delete",
+      "path": "/chat-communications/:id",
+      "handler": "chat-communications.delete",
       "config": {
         "policies": []
       }

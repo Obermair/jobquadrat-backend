@@ -1,4 +1,7 @@
 module.exports = ({ env }) => ({
+    upload: {
+	enabled: true,
+    },
     email: {
       provider: 'sendgrid',
       providerOptions: {

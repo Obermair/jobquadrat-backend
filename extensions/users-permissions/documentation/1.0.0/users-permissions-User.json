@@ -1276,20 +1276,32 @@
                 "assignment": {
                   "type": "string"
                 },
+                "district": {
+                  "type": "string"
+                },
+                "users_permissions_user": {
+                  "type": "string"
+                },
+                "placement_bonuses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "requirements": {
                   "type": "string"
                 },
                 "benefits": {
                   "type": "string"
                 },
-                "placementBonus": {
-                  "type": "number"
+                "non_ad": {
+                  "type": "boolean"
                 },
-                "district": {
-                  "type": "string"
-                },
-                "users_permissions_user": {
-                  "type": "string"
+                "chat_communications": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "published_at": {
                   "type": "string"
@@ -1302,6 +1314,101 @@
                 }
               }
             }
+          },
+          "description": {
+            "type": "string"
+          },
+          "chat_p1": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "advertisement": {
+                  "type": "string"
+                },
+                "chat_sender_p1": {
+                  "type": "string"
+                },
+                "chat_receiver_p2": {
+                  "type": "string"
+                },
+                "last_message_timestamp": {
+                  "type": "string"
+                },
+                "unread_message_p1": {
+                  "type": "boolean"
+                },
+                "unread_message_p2": {
+                  "type": "boolean"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "chat_p2": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "advertisement": {
+                  "type": "string"
+                },
+                "chat_sender_p1": {
+                  "type": "string"
+                },
+                "chat_receiver_p2": {
+                  "type": "string"
+                },
+                "last_message_timestamp": {
+                  "type": "string"
+                },
+                "unread_message_p1": {
+                  "type": "boolean"
+                },
+                "unread_message_p2": {
+                  "type": "boolean"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "services": {
+            "type": "string"
+          },
+          "public": {
+            "type": "boolean"
+          },
+          "profile_img": {
+            "type": "string"
+          },
+          "profile_img_id": {
+            "type": "string"
           }
         }
       },
@@ -1349,6 +1456,33 @@
             "items": {
               "type": "string"
             }
+          },
+          "description": {
+            "type": "string"
+          },
+          "chat_p1": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "chat_p2": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "services": {
+            "type": "string"
+          },
+          "public": {
+            "type": "boolean"
+          },
+          "profile_img": {
+            "type": "string"
+          },
+          "profile_img_id": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

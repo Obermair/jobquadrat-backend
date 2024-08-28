@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/jobs",
-      "handler": "advertisement.find",
+      "path": "/placement-bonuses",
+      "handler": "placement-bonus.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/jobs/count",
-      "handler": "advertisement.count",
+      "path": "/placement-bonuses/count",
+      "handler": "placement-bonus.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/jobs/:id",
-      "handler": "advertisement.findOne",
+      "path": "/placement-bonuses/:id",
+      "handler": "placement-bonus.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/jobs",
-      "handler": "advertisement.create",
+      "path": "/placement-bonuses",
+      "handler": "placement-bonus.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/jobs/:id",
-      "handler": "advertisement.update",
+      "path": "/placement-bonuses/:id",
+      "handler": "placement-bonus.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/jobs/:id",
-      "handler": "advertisement.delete",
+      "path": "/placement-bonuses/:id",
+      "handler": "placement-bonus.delete",
       "config": {
         "policies": []
       }
